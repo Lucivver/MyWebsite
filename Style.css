@@ -90,7 +90,7 @@ body
         }
         .instagram-post img{
             width: 300px;
-            Filter: brightness(1);
+            filter: brightness(1);
 
         }
      }
@@ -116,3 +116,8 @@ body
     cursor:pointer;
   }
      }
+     @Media (min-width: 600px)
+     {
+        .Header{
+        Visibility: hidden;
+     }}
