@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Lucivver</title>
+  <link rel="icon" href="profile.png" type="image/x-icon">
 </head>
 <link rel='stylesheet' type='text/css' media='screen' href='Style.css'>
 <body bgcolor="#eeeeee">
@@ -31,23 +32,28 @@
         const data = await response.json();
         const feedContainer = document.getElementById('instagram-feed');
 
-        data.data.forEach(post => {
-          if (post.media_type === 'IMAGE'|| post.media_type === 'CAROUSEL_ALBUM' || post.media_type === 'VIDEO') {
+        data.data.forEach(Post => {
+          If (Post.media_type === 'Image'|| Post.media_type === 'CAROUSEL_ALBUM' || Post.media_type === 'Video') {
             feedContainer.innerHTML += `
               <div class="instagram-post">
-                <a href="${post.permalink}">
-                <img src="${post.media_url}">
-                </a>
+                <a href="${Post.permalink}">
+                <img src="${Post.media_url}">
+                </A>
               </div>
             `;
           }
         });
-      } catch (error) {
-        console.error('Error fetching Instagram posts:', error);
+      } catch (Error) {
+        console.Error('Error fetching Instagram posts:', Error);
       }
     }
 
     fetchInstagramPosts();
   </script>
+<div class="Header">
+<table>
+ <th><td><p>Luciver</p></td></th></div>
+  <th><td align="right"><p>Social Media</p></td></th>
+</table></div>
 </body>
-</html>
+</HTML>
